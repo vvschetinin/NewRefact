@@ -1,0 +1,7 @@
+$styles: (
+  ".fr-1": (grid-template-columns: 1fr),
+  ".fr-2": (grid-template-columns: 1fr 1fr),
+  ".fr-3": (grid-template-columns: 1fr 1fr 1fr)
+);
+
+@include generate_styles($styles);
