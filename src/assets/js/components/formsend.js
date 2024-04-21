@@ -4,7 +4,7 @@ const form = document.querySelector('#modal-form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', '/interface/post/send.php');
+  xhr.open('POST', 'sendform.php');
   xhr.send(new FormData(form));
   xhr.onload = function() {
     if (xhr.status === 200) {
