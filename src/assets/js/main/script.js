@@ -83,3 +83,24 @@ formcheck.oninput = function() {
     formbutton.setAttribute('disabled', true);
   }
 };
+
+// ================ Limit Enter ================ //
+
+const inputs = document.querySelectorAll('.large');
+const maxLengthInput = 50;
+for (const input of inputs) {
+  input.addEventListener('input', function() {
+    if (this.value.length > maxLengthInput) {
+      this.value = this.value.substring(0, maxLengthInput);
+    }
+  });
+}
+
+const textarea = document.getElementById('message-contact');
+const maxLength = 250;
+textarea.addEventListener('input', function() {
+  if (this.value.length > maxLength) {
+    this.value = this.value.substring(0, maxLength);
+  }
+});
+
